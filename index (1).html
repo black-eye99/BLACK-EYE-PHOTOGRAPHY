@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Black Eye Photography</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white">
+
+<nav class="fixed w-full z-50 bg-black bg-opacity-60 backdrop-blur-lg shadow-lg">
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<h1 class="text-2xl font-bold tracking-widest">BLACK EYE</h1>
+</div>
+</nav>
+
+<section class="hero relative h-screen overflow-hidden">
+<div class="slides absolute inset-0"></div>
+<div class="absolute inset-0 bg-black bg-opacity-50"></div>
+<div class="relative z-10 flex items-center justify-center h-full text-center">
+<div>
+<h2 class="text-5xl md:text-7xl font-bold mb-4">Capture The Moment</h2>
+<p class="text-xl tracking-wide">Premium Cinematic Photography</p>
+</div>
+</div>
+</section>
+
+<section id="nature" class="gallery-section">
+<h2>Nature Photography</h2>
+<div class="gallery" id="natureGallery"></div>
+</section>
+
+<section class="admin-panel">
+<h2>Admin Upload</h2>
+<select id="category">
+<option value="natureGallery">Nature</option>
+</select>
+<input type="file" id="imageInput" accept="image/*">
+<button onclick="uploadImage()">Upload</button>
+</section>
+
+<div id="imageModal" class="modal">
+<span class="close" onclick="closeModal()">&times;</span>
+<img class="modal-content" id="modalImg">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
